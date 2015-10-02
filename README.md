@@ -1,6 +1,5 @@
 #### Week 6 (DRY Refactoring) Assignment
-This week we are going to further explore DRY and how to refactor into clean
-well named methods. The outcomes should be easy to read driver("HowDRYIAm.java") that removes unnecessary repetitive code. You should look for patterns that allow you to declare variables as close to where they are being used and dividing code into logical units of responsibility where possible. Responsibility should be limited to a single task. Like constructing an object or even smaller, like preparing part of an object.
+This week we are going to further explore DRY and how to refactor code into clean well named methods. The outcomes should be an easy to read driver("HowDRYIAm.java") that removes unnecessary repetitive code. You should look for patterns that allow you to declare variables as close to where they are being used and dividing code into logical units of responsibility where possible. Responsibility should be limited to a single task. Like constructing an object or even smaller, like preparing part of an object.
 
 I have provided you with a less than optimal driver that utilizes an `Address` and `Dimension` class to prepare a `Mailing Label` object which can print Shipping Labels. Using the [Dry Example](https://github.com/WCCCEDU/CPT-163-DRY-RetailItem-Example) simplify this driver and make it DRY.
 
