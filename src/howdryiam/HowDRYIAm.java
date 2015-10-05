@@ -32,63 +32,40 @@ public class HowDRYIAm {
 	
 	// Preparing First Box
 	
-	println("Constructing Address one");
-	println("Attn:");
-	name = keyboard.next();
-	println("Street:");
-	street = keyboard.next();
-	println("City:");
-	city = keyboard.next();
-	println("State:");
-	state = keyboard.next();
-	println("ZipCode:");
-	zip = keyboard.nextInt();
+	Address[] address = new Address[2];
+        Dimensions[] dim = new Dimensions[2];
+        LabelPrinter[] label = new LabelPrinter[2];
+        for (int i = 0; i < 2;i++){
+            println("Constructing Address "+ (i+1));
+            println("Attn:");
+            name = keyboard.next();
+            println("Street:");
+            street = keyboard.next();
+            println("City:");
+            city = keyboard.next();
+            println("State:");
+            state = keyboard.next();
+            println("ZipCode:");
+            zip = keyboard.nextInt();
+            
+            address[i] = new Address(city, street, city, state, zip);
+            
+            println("Constructing Box "+ (i+1));
+            println("Height:");
+            height = keyboard.nextDouble();
+            println("Width:");
+            width = keyboard.nextDouble();
+            println("Depth:");
+            depth = keyboard.nextDouble();
 	
-	address1 = new Address(city, street, city, state, zip);
+            dim[i] = new Dimensions(width, height, depth);
 	
-	println("Constructing Box one");
-	println("Height:");
-	height = keyboard.nextDouble();
-	println("Width:");
-	width = keyboard.nextDouble();
-	println("Depth:");
-	depth = keyboard.nextDouble();
-	
-	dim1 = new Dimensions(width, height, depth);
-	
-	label1 = new LabelPrinter(address1, dim1);
-	
-	// Preparing Second Box
-	
-	println("Constructing Address two");
-	println("Attn:");
-	name = keyboard.next();
-	println("Street:");
-	street = keyboard.next();
-	println("City:");
-	city = keyboard.next();
-	println("State:");
-	state = keyboard.next();
-	println("ZipCode:");
-	zip = keyboard.nextInt();
-	
-	address2 = new Address(city, street, city, state, zip);
-	
-	println("Constructing Box two");
-	println("Height:");
-	height = keyboard.nextDouble();
-	println("Width:");
-	width = keyboard.nextDouble();
-	println("Depth:");
-	depth = keyboard.nextDouble();
-	
-	dim2 = new Dimensions(width, height, depth);
-	
-	label2 = new LabelPrinter(address2, dim2);
+            label[i] = new LabelPrinter(address[i], dim[i]);
+        }
 	
 	//Printing Labels
-	label1.printLabel();
-	label2.printLabel();
+	label[0].printLabel();
+	label[1].printLabel();
   }
   
   
